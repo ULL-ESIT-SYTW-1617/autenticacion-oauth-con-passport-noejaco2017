@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-heroku-token-oauth-noejaco17",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Despliegue token heroku oauth",
   "main": "./bin/linea-comando-npm.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "ssh": "./ssh pull-iaas"
   },
   "bin": {
-    "gitbook-start": "./bin/linea-comando-npm.js"
+    "gitbook-start-heroku-token": ".gitbook-start-heroku-token-oauth.js"
   },
   "repository": {
     "type": "git",
