@@ -22,7 +22,7 @@ function initialize(directorio) {
      });`;
 
     //Copia el server.js
-    fs_extended.copyFile(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','server.js'),path.join(process.cwd(), 'app.js'),function(err){
+    fs_extended.copyFile(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','app.js'),path.join(process.cwd(), 'app.js'),function(err){
         if(err)
         console.log(err);
      });
