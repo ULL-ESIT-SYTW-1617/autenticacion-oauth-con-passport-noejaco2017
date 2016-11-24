@@ -16,6 +16,8 @@ Puede partir de los repos de los plugins que ha usado en prácticas anteriores o
 ### Pasos a seguir:
 
 #### Instalación del plugin
+[Repo general](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-noejaco2017) (Añadiendo el plugin disculpe las molestias. Ahora mismo nuestra practica solo funcionara clonadola)
+
 Para ello nos serviremos del paquete [npm-gitbook-start](https://www.npmjs.com/package/gitbook-start-team-noejaco2017-2.0) y seguiremos las instrucciones indicadas.
 
 Una vez finalizado este paso, tendremos un servidor Express desplegado en la IP indicada así como nuevas tareas añadidas al fichero __gulpfile.js__.
