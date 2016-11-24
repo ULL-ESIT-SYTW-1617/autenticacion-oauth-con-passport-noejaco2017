@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var child = require("child_process");
-var fs2 = require('fs-extended');
+var fs_extended = require('fs-extended');
 var prompt = require("prompt");
 var heroku = require('heroku-client');
 
@@ -22,7 +22,7 @@ function initialize(directorio) {
      });`;
 
     //Copia el server.js
-    fs2.copyFile(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','server.js'),path.join(process.cwd(), 'server.js'),function(err){
+    fs_extended.copyFile(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','server.js'),path.join(process.cwd(), 'server.js'),function(err){
         if(err)
         console.log(err);
      });
@@ -76,5 +76,5 @@ function initialize(directorio) {
 
 module.exports = {
   initialize,
-  deploy
+  //deploy
 }
