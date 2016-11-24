@@ -1,8 +1,8 @@
 {
   "name": "gitbook-start-heroku-token-oauth-noejaco17",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Despliegue token heroku oauth",
-  "main": "./bin/linea-comando-npm.js",
+  "main": "gitbook-start-heroku-token-oauth.js",
   "scripts": {
     "generate-gitbook": "./scripts/losh generate-gitbook",
     "generate-wiki": "./scripts/losh generate-wiki",
@@ -15,11 +15,11 @@
     "ssh": "./ssh pull-iaas"
   },
   "bin": {
-    "gitbook-start-heroku-token": ".gitbook-start-heroku-token-oauth.js"
+    "gitbook-start-heroku-token": "gitbook-start-heroku-token-oauth.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alu0100836059/Apuntes_SYTW.git",
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/autenticacion-oauth-con-passport-noejaco2017",
     "wiki": "https://github.com/alu0100836059/Apuntes_SYTW.wiki.git"
   },
   "keywords": [
