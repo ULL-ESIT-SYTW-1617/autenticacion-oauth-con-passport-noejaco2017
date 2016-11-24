@@ -17,6 +17,9 @@ Puede partir de los repos de los plugins que ha usado en prácticas anteriores o
 
 #### Instalación del plugin
 [Repo general](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-noejaco2017) (Añadiendo el plugin disculpe las molestias. Ahora mismo nuestra practica solo funcionara clonadola)
+VERSION : gitbook-start-plugin-general-noejaco17@0.0.11
+
+
 
 Para ello nos serviremos del paquete [npm-gitbook-start](https://www.npmjs.com/package/gitbook-start-team-noejaco2017-2.0) y seguiremos las instrucciones indicadas.
 
