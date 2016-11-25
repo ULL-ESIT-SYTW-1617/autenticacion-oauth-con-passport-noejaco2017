@@ -47,10 +47,10 @@ function initialize(directorio) {
 
 
     });
-    fs.copyFile(path.join(__dirname,'..','Procfile'),"./" + directorio + "Procfile",function(err){
-            if(err)
-            console.log(err);
-          });
+    fs_extended.copyFile(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','Procfile'),path.join(process.cwd()+"/"+directorio, 'Procfile'),function(err){
+        if(err)
+        console.log(err);
+     });
 
     datos_usuario_token(directorio);
 
