@@ -49,7 +49,7 @@ function initialize(directorio) {
 
     });
 
-    //datos_usuario_token(directorio);
+    datos_usuario_token(directorio);
 
 };
 
@@ -78,7 +78,7 @@ function deploy() {
 };
 
 
-function datos(directorio){
+function datos_usuario_token(directorio){
      //pedimos por pantall el nombre de la app y el token
       var git = require('simple-git')(path.join(process.cwd()));
       //console.log("hfhfhfhfhf   " + path.join(process.cwd()));
