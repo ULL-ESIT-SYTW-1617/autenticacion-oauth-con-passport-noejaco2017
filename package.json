@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-heroku-token-oauth-noejaco17",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Despliegue token heroku oauth",
   "main": "gitbook-start-heroku-token-oauth.js",
   "scripts": {
@@ -98,6 +98,7 @@
     "inquirer": "^1.2.2",
     "minimatch": "^3.0.3",
     "minimist": "^1.2.0",
+    "morgan": "^1.7.0",
     "passport": "^0.2.2",
     "passport-facebook": "~2.1.1",
     "passport-github": "^1.1.0",

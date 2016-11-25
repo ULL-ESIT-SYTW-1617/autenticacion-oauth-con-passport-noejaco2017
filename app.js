@@ -4,7 +4,7 @@ var app = express();
 var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
 var exec = require('child_process').exec;
-
+var logger = require('morgan');
 // ### Jaco 12/11
 var passport = require('passport');
 var session = require('express-session');
@@ -22,6 +22,7 @@ var url=require('url');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 //app.use(require('serve-static')(__dirname + 'views'));
+app.use(logger('combined'));
 app.use(require('cookie-parser')());
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(require('express-session')({ secret: 'f584e68426cfda58592977e598a99eea68966503', resave: true, saveUninitialized: true }));
