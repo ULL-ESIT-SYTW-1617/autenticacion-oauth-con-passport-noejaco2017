@@ -120,7 +120,7 @@ function datos_usuario_token(directorio){
 
             fs.mkdirSync(path.join(process.cwd(), ".token_heroku"));
             fs.writeFileSync(path.join(process.cwd(),".token_heroku","token.json"),json);
-            fs.writeFileSync(path.join(process.cwd(),"aplicacion.json"),configuracion);
+            fs.writeFileSync(path.join(process.cwd()+"/"+directorio,"aplicacion.json"),configuracion);
 
             var token = require(path.join(process.cwd(), ".token_heroku","token.json"));
             var pack= require(path.join(process.cwd(), 'package.json'));
