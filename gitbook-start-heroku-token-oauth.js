@@ -20,14 +20,17 @@ function initialize(directorio) {
             var url = paquete.repository.url;
             heroku.deploy();
      });`;
-
+    //  fs.copyFile(path.join(__dirname,'..','book.json'),"./" + directorio + "/book.json",function(err){
+    //       if(err)
+    //       console.log(err);
+    //     });
     //Copia el server.js
-    fs_extended.copyFile(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','app.js'),path.join(process.cwd(), 'app.js'),function(err){
+    fs_extended.copyFile(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','app.js'),path.join(process.cwd()+"/"+directorio, 'app.js'),function(err){
         if(err)
         console.log(err);
      });
 
-      fs.copyDir(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','views'),path.join(process.cwd(), 'views'),function(err){
+      fs.copyDir(path.join(process.cwd(),'node_modules','gitbook-start-heroku-token-oauth-noejaco17','views'),path.join(process.cwd()+"/"+directorio, 'views'),function(err){
         if(err)
         console.log(err);
      });
@@ -38,7 +41,7 @@ function initialize(directorio) {
     //  });
 
     //añadimos la tarea
-    fs.writeFileSync(path.resolve(process.cwd(),'gulpfile.js'), contenido,  {'flag':'a'},  function(err) {
+    fs.writeFileSync(path.resolve(process.cwd()+"/"+directorio,'gulpfile.js'), contenido,  {'flag':'a'},  function(err) {
         if (err) {
             return console.error(err);
         }
@@ -54,27 +57,27 @@ function initialize(directorio) {
 //
 
 //
-// function deploy() {
-//
-//
-//
-//     console.log("Comenzando el deploy en HEROKU");
-//
-//
-//
-//     child.exec('git add . ; git commit -m "subiendo a heroku"; git push heroku master;', function(error, stdout, stderr){
-//         if(error)
-//           console.log(error)
-//
-//         console.log(stderr);
-//         console.log(stdout);
-//       });
-//
-//
-//
-// };
+function deploy() {
+
+
+
+    console.log("Comenzando el deploy en HEROKU");
+
+
+
+    child.exec('git add . ; git commit -m "subiendo a heroku"; git push heroku master;', function(error, stdout, stderr){
+        if(error)
+          console.log(error)
+
+        console.log(stderr);
+        console.log(stdout);
+      });
+
+
+
+};
 
 module.exports = {
   initialize,
-  //deploy
+  deploy
 }
