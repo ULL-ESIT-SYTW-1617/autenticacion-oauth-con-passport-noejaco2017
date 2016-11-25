@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-heroku-token-oauth-noejaco17",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Despliegue token heroku oauth",
   "main": "gitbook-start-heroku-token-oauth.js",
   "scripts": {
