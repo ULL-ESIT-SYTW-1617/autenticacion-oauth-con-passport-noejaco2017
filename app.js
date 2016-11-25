@@ -10,6 +10,7 @@ var passport = require('passport');
 var session = require('express-session');
 var FacebookStrategy = require('passport-facebook').Strategy;
 var GithubStrategy = require('passport-github').Strategy;
+var aplicacion = require(path.resolve(process.cwd(),"aplicacion.json"));
 
 
 //*********************************************************
@@ -157,31 +158,30 @@ app.get('/profile',
     res.render('profile', { id: req.user.profile.id,username:req.user.profile.username,user: req.user /*,displayName:*/});
   });
 
-
-passport.use(new GithubStrategy({
-  clientID: '1f3b68617159ac9492c2',
-  clientSecret: 'f584e68426cfda58592977e598a99eea68966503',
-  callbackURL: 'http://localhost:8080/auth/github/callback'
-}, function(accessToken, refreshToken, profile, done){
-  console.log("ACCEDO A GITHUB PASSPORT");
-    console.log("accessToken"+accessToken);
-      console.log("refreshToken"+refreshToken);
-        console.log("profile"+profile.id);
-  //return done (null,profile);
-  // User.findOrCreate({ githubId: profile.id }, function (err, user) {
-  //   console.log("BUSCO USUARIOS");
-  //   console.log("accessToken"+accessToken);
-  //     console.log("refreshToken"+refreshToken);
-  //       console.log("profile"+profile);
-  //       console.log("DONE"+done);
-  //       console.log("USER"+user);
-  //     return cb(err, user);
-  //   });
-  done(null, {
-    accessToken: accessToken,
-    profile: profile
-  });
-}));
+  passport.use(new GithubStrategy({
+    clientID: aplicacion.Config.id_client,
+    clientSecret: aplicacion.Config.secret_client,
+    callbackURL: `https://${aplicacion.Config.nombre_app}.herokuapp.com/callback`
+  }, function(accessToken, refreshToken, profile, done){
+    console.log("ACCEDO A GITHUB PASSPORT");
+      console.log("accessToken"+accessToken);
+        console.log("refreshToken"+refreshToken);
+          console.log("profile"+profile.id);
+    //return done (null,profile);
+    // User.findOrCreate({ githubId: profile.id }, function (err, user) {
+    //   console.log("BUSCO USUARIOS");
+    //   console.log("accessToken"+accessToken);
+    //     console.log("refreshToken"+refreshToken);
+    //       console.log("profile"+profile);
+    //       console.log("DONE"+done);
+    //       console.log("USER"+user);
+    //     return cb(err, user);
+    //   });
+    done(null, {
+      accessToken: accessToken,
+      profile: profile
+    });
+  }));
 
 passport.serializeUser(function(user, done) {
   console.log("SERIALIZER");
