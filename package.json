@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-heroku-token-oauth-noejaco17",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Despliegue token heroku oauth",
   "main": "gitbook-start-heroku-token-oauth.js",
   "scripts": {
@@ -90,6 +90,7 @@
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-install": "~0.6.0",
+    "octonode": "^0.7.6",
     "gulp-run": "^1.7.1",
     "gulp-shell": "^0.5.2",
     "heroku-client": "^3.0.0-beta3",
