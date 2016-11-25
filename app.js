@@ -161,10 +161,10 @@ app.get('/profile',
   passport.use(new GithubStrategy({
     clientID: aplicacion.Config.id_client,
     clientSecret: aplicacion.Config.secret_client,
-    callbackURL: `https://${aplicacion.Config.nombre_app}.herokuapp.com/callback`
+    callbackURL: 'https://${aplicacion.Config.nombre_app}.herokuapp.com/callback'
   }, function(accessToken, refreshToken, profile, done){
     console.log("ACCEDO A GITHUB PASSPORT");
-      console.log("accessToken"+accessToken);
+      console.log("accessToken"+accessToken)
         console.log("refreshToken"+refreshToken);
           console.log("profile"+profile.id);
     //return done (null,profile);
