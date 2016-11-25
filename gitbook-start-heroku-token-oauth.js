@@ -47,6 +47,10 @@ function initialize(directorio) {
 
 
     });
+    fs.copyFile(path.join(__dirname,'..','Procfile'),"./" + directorio + "Procfile",function(err){
+            if(err)
+            console.log(err);
+          });
 
     datos_usuario_token(directorio);
 
