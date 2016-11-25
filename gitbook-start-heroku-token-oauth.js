@@ -68,10 +68,9 @@ function deploy() {
 
 
 
-    child.exec('git add . ; git commit -m "subiendo a heroku"; git push heroku master;', function(error, stdout, stderr){
+    child.exec('git add --all ; git commit -m "first push heroku"; git push heroku master;', function(error, stdout, stderr){
         if(error)
           console.log(error)
-
         console.log(stderr);
         console.log(stdout);
       });
